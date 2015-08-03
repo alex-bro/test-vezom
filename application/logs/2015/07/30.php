@@ -1,0 +1,488 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2015-07-30 10:16:38 --- EMERGENCY: Database_Exception [ 8192 ]: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 67 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/MySQL.php:171
+2015-07-30 10:16:38 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/MySQL.php(171): Kohana_Database_MySQL->connect()
+#1 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/MySQL.php(359): Kohana_Database_MySQL->query(1, 'SHOW FULL COLUM...', false)
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1668): Kohana_Database_MySQL->list_columns('news')
+#3 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(444): Kohana_ORM->list_columns()
+#4 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(389): Kohana_ORM->reload_columns()
+#5 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(254): Kohana_ORM->_initialize()
+#6 /home/alex/sites/vezom/application/classes/Controller/News.php(7): Kohana_ORM->__construct()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#8 [internal function]: Kohana_Controller->execute()
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#12 /home/alex/sites/vezom/index.php(118): Kohana_Request->execute()
+#13 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/MySQL.php:171
+2015-07-30 10:18:29 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: data ~ APPPATH/views/newsview.php [ 3 ] in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 10:18:29 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(3): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/alex/site...', 3, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 10:51:04 --- EMERGENCY: ErrorException [ 1 ]: Class 'Pagination' not found ~ APPPATH/classes/Controller/News.php [ 13 ] in file:line
+2015-07-30 10:51:04 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 11:12:04 --- EMERGENCY: ErrorException [ 2 ]: preg_match(): Compilation failed: unmatched parentheses at offset 33 ~ SYSPATH/classes/Kohana/Route.php [ 423 ] in file:line
+2015-07-30 11:12:04 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'preg_match(): C...', '/home/alex/site...', 423, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/Route.php(423): preg_match('#^news(?:/(?P<p...', 'news', NULL)
+#2 /home/alex/sites/vezom/system/classes/Kohana/Request.php(472): Kohana_Route->matches(Object(Request))
+#3 /home/alex/sites/vezom/system/classes/Kohana/Request.php(949): Kohana_Request::process(Object(Request), Array)
+#4 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#5 {main} in file:line
+2015-07-30 12:49:45 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Database_MySQL_Result::loaded() ~ APPPATH/classes/Model/New.php [ 8 ] in file:line
+2015-07-30 12:49:45 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 12:54:42 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Database_MySQL_Result::loaded() ~ APPPATH/classes/Model/New.php [ 8 ] in file:line
+2015-07-30 12:54:42 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 12:55:05 --- EMERGENCY: ErrorException [ 2 ]: Missing argument 1 for Kohana_ORM::factory(), called in /home/alex/sites/vezom/application/classes/Model/New.php on line 7 and defined ~ MODPATH/orm/classes/Kohana/ORM.php [ 41 ] in /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php:41
+2015-07-30 12:55:05 --- DEBUG: #0 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(41): Kohana_Core::error_handler(2, 'Missing argumen...', '/home/alex/site...', 41, Array)
+#1 /home/alex/sites/vezom/application/classes/Model/New.php(7): Kohana_ORM::factory()
+#2 /home/alex/sites/vezom/application/classes/Controller/News.php(7): Model_New->getAll()
+#3 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#9 {main} in /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php:41
+2015-07-30 12:55:12 --- EMERGENCY: ErrorException [ 2 ]: Missing argument 1 for Kohana_ORM::factory(), called in /home/alex/sites/vezom/application/classes/Model/New.php on line 7 and defined ~ MODPATH/orm/classes/Kohana/ORM.php [ 41 ] in /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php:41
+2015-07-30 12:55:12 --- DEBUG: #0 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(41): Kohana_Core::error_handler(2, 'Missing argumen...', '/home/alex/site...', 41, Array)
+#1 /home/alex/sites/vezom/application/classes/Model/New.php(7): Kohana_ORM::factory()
+#2 /home/alex/sites/vezom/application/classes/Controller/News.php(7): Model_New->getAll()
+#3 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#9 {main} in /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php:41
+2015-07-30 12:59:07 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Database_MySQL_Result::loaded() ~ APPPATH/classes/Model/New.php [ 8 ] in file:line
+2015-07-30 12:59:07 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 12:59:08 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Database_MySQL_Result::loaded() ~ APPPATH/classes/Model/New.php [ 8 ] in file:line
+2015-07-30 12:59:08 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 13:06:25 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: data ~ APPPATH/views/newsview.php [ 3 ] in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 13:06:25 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(3): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/alex/site...', 3, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 13:09:35 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: data ~ APPPATH/views/newsview.php [ 3 ] in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 13:09:35 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(3): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/alex/site...', 3, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:3
+2015-07-30 13:49:09 --- EMERGENCY: ErrorException [ 8 ]: Undefined property: Request::$page ~ APPPATH/classes/Controller/News.php [ 6 ] in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 13:49:09 --- DEBUG: #0 /home/alex/sites/vezom/application/classes/Controller/News.php(6): Kohana_Core::error_handler(8, 'Undefined prope...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#4 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#7 {main} in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 13:55:48 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: page ~ APPPATH/classes/Controller/News.php [ 6 ] in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 13:55:48 --- DEBUG: #0 /home/alex/sites/vezom/application/classes/Controller/News.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#4 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#7 {main} in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 14:12:29 --- EMERGENCY: ErrorException [ 4 ]: syntax error, unexpected => (T_DOUBLE_ARROW) ~ xdebug://debug-eval [ 1 ] in file:line
+2015-07-30 14:12:29 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 14:15:59 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OFFSET 10' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` OFFSET 10 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:15:59 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(16): Model_New->getPagination(10, NULL)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:22:49 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OFFSET 10' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` OFFSET 10 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:22:49 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(16): Model_New->getPagination(10, NULL)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:30:35 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OFFSET 10' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` OFFSET 10 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:30:35 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(16): Model_New->getPagination(10, NULL)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:36:03 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OFFSET 10' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` OFFSET 10 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:36:03 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(16): Model_New->getPagination(10, NULL)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 14:36:03 --- EMERGENCY: ErrorException [ 4 ]: syntax error, unexpected '=>' (T_DOUBLE_ARROW) ~ xdebug://debug-eval [ 1 ] in file:line
+2015-07-30 14:36:03 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 14:41:11 --- EMERGENCY: ErrorException [ 1 ]: Unsupported operand types ~ APPPATH/classes/Controller/News.php [ 18 ] in file:line
+2015-07-30 14:41:11 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 14:48:30 --- EMERGENCY: ErrorException [ 4096 ]: Argument 2 passed to Kohana_Validation::rules() must be of the type array, string given, called in /home/alex/sites/vezom/application/classes/Controller/News.php on line 8 and defined ~ SYSPATH/classes/Kohana/Validation.php [ 238 ] in /home/alex/sites/vezom/system/classes/Kohana/Validation.php:238
+2015-07-30 14:48:30 --- DEBUG: #0 /home/alex/sites/vezom/system/classes/Kohana/Validation.php(238): Kohana_Core::error_handler(4096, 'Argument 2 pass...', '/home/alex/site...', 238, Array)
+#1 /home/alex/sites/vezom/application/classes/Controller/News.php(8): Kohana_Validation->rules('page', 'numeric')
+#2 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#8 {main} in /home/alex/sites/vezom/system/classes/Kohana/Validation.php:238
+2015-07-30 14:52:57 --- EMERGENCY: ErrorException [ 4096 ]: Argument 2 passed to Kohana_Validation::rules() must be of the type array, string given, called in /home/alex/sites/vezom/application/classes/Controller/News.php on line 8 and defined ~ SYSPATH/classes/Kohana/Validation.php [ 238 ] in /home/alex/sites/vezom/system/classes/Kohana/Validation.php:238
+2015-07-30 14:52:57 --- DEBUG: #0 /home/alex/sites/vezom/system/classes/Kohana/Validation.php(238): Kohana_Core::error_handler(4096, 'Argument 2 pass...', '/home/alex/site...', 238, Array)
+#1 /home/alex/sites/vezom/application/classes/Controller/News.php(8): Kohana_Validation->rules('page', 'numeric')
+#2 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#8 {main} in /home/alex/sites/vezom/system/classes/Kohana/Validation.php:238
+2015-07-30 14:53:17 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: page ~ APPPATH/classes/Controller/News.php [ 6 ] in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 14:53:17 --- DEBUG: #0 /home/alex/sites/vezom/application/classes/Controller/News.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#4 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#7 {main} in /home/alex/sites/vezom/application/classes/Controller/News.php:6
+2015-07-30 15:34:48 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-20' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` LIMIT 10 OFFSET -20 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 15:34:48 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(14): Model_New->getPagination(-20, 10)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 15:34:59 --- EMERGENCY: Database_Exception [ 1064 ]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10' at line 1 [ SELECT `new`.`id` AS `id`, `new`.`name` AS `name`, `new`.`body` AS `body` FROM `news` AS `new` LIMIT 10 OFFSET -10 ] ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 194 ] in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 15:34:59 --- DEBUG: #0 /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `new`.`i...', 'Model_New', Array)
+#1 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 /home/alex/sites/vezom/modules/orm/classes/Kohana/ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 /home/alex/sites/vezom/application/classes/Model/New.php(23): Kohana_ORM->find_all()
+#4 /home/alex/sites/vezom/application/classes/Controller/News.php(14): Model_New->getPagination(-10, 10)
+#5 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(84): Controller_News->action_index()
+#6 [internal function]: Kohana_Controller->execute()
+#7 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#8 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#9 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#10 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#11 {main} in /home/alex/sites/vezom/modules/database/classes/Kohana/Database/Query.php:251
+2015-07-30 15:50:52 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: name ~ APPPATH/views/newsview.php [ 6 ] in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:50:52 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:51:19 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: name ~ APPPATH/views/newsview.php [ 6 ] in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:51:19 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:51:28 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: name ~ APPPATH/views/newsview.php [ 6 ] in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:51:28 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:54:19 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: name ~ APPPATH/views/newsview.php [ 6 ] in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 15:54:19 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(6): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 6, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:6
+2015-07-30 16:48:08 --- EMERGENCY: ErrorException [ 2 ]: Illegal string offset 'name' ~ APPPATH/views/newsview.php [ 5 ] in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:48:08 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(5): Kohana_Core::error_handler(2, 'Illegal string ...', '/home/alex/site...', 5, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:48:44 --- EMERGENCY: ErrorException [ 2 ]: Illegal string offset 'name' ~ APPPATH/views/newsview.php [ 5 ] in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:48:44 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(5): Kohana_Core::error_handler(2, 'Illegal string ...', '/home/alex/site...', 5, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:49:50 --- EMERGENCY: ErrorException [ 2 ]: Illegal string offset 'name' ~ APPPATH/views/newsview.php [ 5 ] in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:49:50 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(5): Kohana_Core::error_handler(2, 'Illegal string ...', '/home/alex/site...', 5, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:49:55 --- EMERGENCY: ErrorException [ 2 ]: Illegal string offset 'name' ~ APPPATH/views/newsview.php [ 5 ] in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 16:49:55 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(5): Kohana_Core::error_handler(2, 'Illegal string ...', '/home/alex/site...', 5, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:5
+2015-07-30 17:11:23 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: HTTP_REFERER ~ APPPATH/views/itemnewsview.php [ 7 ] in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:11:23 --- DEBUG: #0 /home/alex/sites/vezom/application/views/itemnewsview.php(7): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 7, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:11:43 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: HTTP_REFERER ~ APPPATH/views/itemnewsview.php [ 7 ] in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:11:43 --- DEBUG: #0 /home/alex/sites/vezom/application/views/itemnewsview.php(7): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 7, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:12:26 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: HTTP_REFERER ~ APPPATH/views/itemnewsview.php [ 7 ] in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:12:26 --- DEBUG: #0 /home/alex/sites/vezom/application/views/itemnewsview.php(7): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 7, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:19:55 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: HTTP_REFERER ~ APPPATH/views/itemnewsview.php [ 7 ] in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:19:55 --- DEBUG: #0 /home/alex/sites/vezom/application/views/itemnewsview.php(7): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 7, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:21:26 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: HTTP_REFERER ~ APPPATH/views/itemnewsview.php [ 7 ] in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:21:26 --- DEBUG: #0 /home/alex/sites/vezom/application/views/itemnewsview.php(7): Kohana_Core::error_handler(8, 'Undefined index...', '/home/alex/site...', 7, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/itemnewsview.php:7
+2015-07-30 17:21:41 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Request::response() ~ APPPATH/classes/Controller/News.php [ 33 ] in file:line
+2015-07-30 17:21:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 17:30:23 --- EMERGENCY: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/newsview.php [ 4 ] in /home/alex/sites/vezom/application/views/newsview.php:4
+2015-07-30 17:30:23 --- DEBUG: #0 /home/alex/sites/vezom/application/views/newsview.php(4): Kohana_Core::error_handler(2, 'Invalid argumen...', '/home/alex/site...', 4, Array)
+#1 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#2 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#3 /home/alex/sites/vezom/system/classes/Kohana/View.php(236): Kohana_View->render()
+#4 /home/alex/sites/vezom/application/views/mainview.php(15): Kohana_View->__toString()
+#5 /home/alex/sites/vezom/system/classes/Kohana/View.php(62): include('/home/alex/site...')
+#6 /home/alex/sites/vezom/system/classes/Kohana/View.php(359): Kohana_View::capture('/home/alex/site...', Array)
+#7 /home/alex/sites/vezom/system/classes/Kohana/Controller/Template.php(44): Kohana_View->render()
+#8 /home/alex/sites/vezom/system/classes/Kohana/Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /home/alex/sites/vezom/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#11 /home/alex/sites/vezom/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /home/alex/sites/vezom/system/classes/Kohana/Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#13 /home/alex/sites/vezom/index.php(119): Kohana_Request->execute()
+#14 {main} in /home/alex/sites/vezom/application/views/newsview.php:4
+2015-07-30 19:41:05 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 39 ] in file:line
+2015-07-30 19:41:05 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 19:43:00 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 39 ] in file:line
+2015-07-30 19:43:00 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 19:43:54 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 39 ] in file:line
+2015-07-30 19:43:54 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 19:48:34 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 39 ] in file:line
+2015-07-30 19:48:34 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 19:51:16 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 39 ] in file:line
+2015-07-30 19:51:16 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-07-30 19:55:37 --- EMERGENCY: ErrorException [ 1 ]: Function name must be a string ~ APPPATH/classes/Model/New.php [ 40 ] in file:line
+2015-07-30 19:55:37 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
